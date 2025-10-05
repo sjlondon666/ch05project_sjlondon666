@@ -1,3 +1,7 @@
+<p>
+CheckMissing() verifies that all required fields are filled in.
+If any are empty, it updates the missing-count span and blocks submission.
+</p>
 
 function checkMissing() {
     const requiredFields = document.querySelectorAll(".required");
@@ -8,8 +12,7 @@ function checkMissing() {
             missingCount++;
         }
     });
-
-    const span = document.getElementById("missing-count");
+    
     if (missingCount > 0) {
         span.textContent = `You still have ${missingCount} required field(s) missing.`;
     } else {
@@ -17,7 +20,10 @@ function checkMissing() {
     }
     return missingCount;
 }
-
+<p>
+ValidateEmail() checks if the email input has at least 8 characters.
+If invalid, the email input gets a red border; if valid, revert to required styling.
+</p>
 function validateEmail() {
     const emailField = document.getElementById("email");
     if (emailField.value.length < 8) {
@@ -28,8 +34,10 @@ function validateEmail() {
         return true;
     }
 }
-
-
+<p>
+RunValidation() runs both checkMissing() and validateEmail().
+If errors exist, an alert message is shown and submission is blocked.
+</p>
 function runValidation() {
     const missing = checkMissing();
     const emailValid = validateEmail();

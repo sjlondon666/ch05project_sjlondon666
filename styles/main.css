@@ -1,0 +1,21 @@
+/* Style for required fields */
+.required {
+    border: 2px solid yellow;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Invalid email field styling */
+.invalid {
+    border: 2px solid red;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
